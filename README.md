@@ -4,11 +4,11 @@ Repository for presenting homework from the "Intro to Robotics" course taken in 
 
 ## Homework #1
 
-For this homework I had to complete a formular via this link https://forms.gle/35oZKw9QovH9uM5U7. This homework was assigned and succesfully submitted through Microsoft Teams on Wednesday 7th of October, 2026 at 20:43. I, personally, did not have any problems comleting this formular. Through this homework I got my group where I will continue my studies in "Introduction to Robotics" subject.
+For this homework I had to complete a formular via this link https://forms.gle/35oZKw9QovH9uM5U7. This homework was assigned and successfully submitted through Microsoft Teams on Wednesday 7th of October, 2026 at 20:43. I, personally, did not have any problems completing this formular. Through this homework I got my group where I will continue my studies in "Introduction to Robotics" subject.
 
 ## Homework #2
 
-For this homework I had to дearn how to work with the Falstad Circuit Simulator and strengthen my knowledge of fundamental electrical components, Ohm’s Law, Kirchhoff’s Voltage Law (KVL), and Kirchhoff’s Current Law (KCL) by creating and analyzing circuits, calculating electrical values, and confirming my theoretical results through simulations.
+For this homework I had to learn how to work with the Falstad Circuit Simulator and strengthen my knowledge of fundamental electrical components, Ohm’s Law, Kirchhoff’s Voltage Law (KVL), and Kirchhoff’s Current Law (KCL) by creating and analyzing circuits, calculating electrical values, and confirming my theoretical results through simulations.
 
 
 ### First Exercise
@@ -17,7 +17,7 @@ To complete this exercise I had to create a circuit with a direct current voltag
 
 ### Solution
 
-I started with direct current voltage source with 5 V then connected through wires two resisters and one LED consequentially. I selected two 150 ohm resistors connected in series. 
+I started with direct current voltage source with 5 V then connected through wires two resistors and one LED in series. I selected two 150 ohm resistors connected in series. 
 
 Their total resistance is 300 ohms. Assuming the LED has a forward voltage of 2 V, the voltage across the resistors is 5 minus 2, which equals 3 V. Using Ohm’s law **( V = I * R )**, the current is 3 divided by 300, giving **10 mA**. That is how I got the current value.
 
@@ -25,9 +25,9 @@ To determine the allowable resistance range, I used the maximum current of 20 mi
 
 Since both resistors have the same resistance and are connected in series, they share the 3 V equally. So, for the first and second resistors we get V<sub>R1</sub>=V<sub>R2</sub>=0.01*150=**1.5 V** of voltage drops.
 
-To calculate the power of dissipated by each resistor I used **Joule's Law of Heating**. Power tells us how much electrical energy each resistor converts into heat per second. So, with this formula: **P=I^2*R** we get: P<sub>R1</sub>=P<sub>R2</sub>= (0.01)^2 * 150 = 0.015 W or 15 mW.
+To calculate the power dissipated by each resistor I used **Joule's Law of Heating**. Power tells us how much electrical energy each resistor converts into heat per second. So, with this formula: **P=I^2*R** we get: P<sub>R1</sub>=P<sub>R2</sub>= (0.01)^2 * 150 = 0.015 W or 15 mW.
 
-Kirchoff's Voltage Law states:
+Kirchhoff's Voltage Law states:
 _The sum of all voltage rises and drops around a closed loop equals zero._
 For our circuit:
 V<sub>source</sub>-V<sub>R1</sub>-V<sub>R2</sub>-V<sub>LED</sub>=0
