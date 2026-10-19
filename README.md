@@ -1,10 +1,12 @@
 # Introduction To Robotics (2026-2027)
 
-Repository for presenting homework from the "Intro to Robotics" course taken in  3rd year in 2026-2027. Each homework will have a detailed description in the following sections.
+Meylis Hudayberdiyev's repository for presenting homework from the "Intro to Robotics" course taken in  3rd year in 2026-2027. Each homework will have a detailed description in the following sections.
+__________________________________________________________________________________________________________
 
 ## Homework #1
 
 For this homework I had to complete a formular via this link https://forms.gle/35oZKw9QovH9uM5U7. This homework was assigned and successfully submitted through Microsoft Teams on Wednesday 7th of October, 2026 at 20:43. I, personally, did not have any problems completing this formular. Through this homework I got my group where I will continue my studies in "Introduction to Robotics" subject.
+__________________________________________________________________________________________________________
 
 ## Homework #2
 
@@ -28,11 +30,17 @@ Since both resistors have the same resistance and are connected in series, they 
 To calculate the power dissipated by each resistor I used **Joule's Law of Heating**. Power tells us how much electrical energy each resistor converts into heat per second. So, with this formula: **P=I^2*R** we get: P<sub>R1</sub>=P<sub>R2</sub>= (0.01)^2 * 150 = 0.015 W or 15 mW.
 
 Kirchhoff's Voltage Law states:
+
 _The sum of all voltage rises and drops around a closed loop equals zero._
+
 For our circuit:
+
 V<sub>source</sub>-V<sub>R1</sub>-V<sub>R2</sub>-V<sub>LED</sub>=0
+
 5 - 1.5 - 1.5 - 2 = 0 
+
 5 - 5 = 0 V
+
 KVL is verified!
 
 ### Pictures and Videos
@@ -42,3 +50,5 @@ KVL is verified!
 ![Exercise 1 calculations](Homework%232/ex1sol.jpg)
 
 [Watch the Exercise 1 video](Homework%232/ex1vid.mov)
+__________________________________________________________________________________________________________
+
