@@ -28,11 +28,17 @@ Since both resistors have the same resistance and are connected in series, they 
 To calculate the power of dissipated by each resistor I used **Joule's Law of Heating**. Power tells us how much electrical energy each resistor converts into heat per second. So, with this formula: **P=I^2*R** we get: P<sub>R1</sub>=P<sub>R2</sub>= (0.01)^2 * 150 = 0.015 W or 15 mW.
 
 Kirchoff's Voltage Law states:
+
 _The sum of all voltage rises and drops around a closed loop equals zero._
+
 For our circuit:
+
 V<sub>source</sub>-V<sub>R1</sub>-V<sub>R2</sub>-V<sub>LED</sub>=0
+
 5 - 1.5 - 1.5 - 2 = 0 
+
 5 - 5 = 0 V
+
 KVL is verified!
 
 ### Pictures and Videos
