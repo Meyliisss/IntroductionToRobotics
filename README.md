@@ -1,10 +1,12 @@
 # Introduction To Robotics (2026-2027)
 
-Repository for presenting homework from the "Intro to Robotics" course taken in  3rd year in 2026-2027. Each homework will have a detailed description in the following sections.
+Meylis Hudayberdiyev's repository for presenting homework from the "Intro to Robotics" course taken in  3rd year in 2026-2027. Each homework will have a detailed description in the following sections.
+__________________________________________________________________________________________________________
 
 ## Homework #1
 
 For this homework I had to complete a formular via this link https://forms.gle/35oZKw9QovH9uM5U7. This homework was assigned and succesfully submitted through Microsoft Teams on Wednesday 7th of October, 2026 at 20:43. I, personally, did not have any problems comleting this formular. Through this homework I got my group where I will continue my studies in "Introduction to Robotics" subject.
+__________________________________________________________________________________________________________
 
 ## Homework #2
 
@@ -48,3 +50,5 @@ KVL is verified!
 ![Exercise 1 calculations](Homework%232/ex1sol.jpg)
 
 [Watch the Exercise 1 video](Homework%232/ex1vid.mov)
+__________________________________________________________________________________________________________
+
