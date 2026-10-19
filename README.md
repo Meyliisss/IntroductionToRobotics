@@ -45,10 +45,10 @@ KVL is verified!
 
 ### Pictures and Videos
 
-![Exercise 1 circuit](Homework%232/ex1.png)
+![Exercise 1 circuit](Homework%232/ex1/ex1.png)
 
-![Exercise 1 calculations](Homework%232/ex1sol.jpg)
+![Exercise 1 calculations](Homework%232/ex1/ex1sol.jpg)
 
-[Watch the Exercise 1 video](Homework%232/ex1vid.mov)
+[Watch the Exercise 1 video](Homework%232/ex1/ex1vid.mov)
 __________________________________________________________________________________________________________
 
