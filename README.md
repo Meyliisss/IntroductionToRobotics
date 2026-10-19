@@ -15,7 +15,7 @@ For this homework I had to learn how to work with the Falstad Circuit Simulator 
 
 ### First Exercise
 
-To complete this exercise I had to create a circuit with a direct current voltage source with 5 V and at least two resistors and one LED in series. Afterwards I had to choose resistor values to get a current of 5-20 mA through LED. And finally I had to calculate the current, voltage drops and power dissipated by each resistor and to verify KVL.
+To complete this exercise I had to create a circuit with a direct current voltage source of 5 V and at least two resistors and one LED in series. Afterwards I had to choose resistor values to get a current of 5-20 mA through LED. And finally I had to calculate the current, voltage drops and power dissipated by each resistor and to verify KVL.
 
 ### Solution
 
@@ -51,4 +51,11 @@ KVL is verified!
 
 [Watch the Exercise 1 video](Homework%232/ex1/ex1vid.mov)
 __________________________________________________________________________________________________________
+
+### Second Exercise
+
+To complete this exercise I had to create a circuit with a direct current voltage source of 9 V and at least two parallel branches, each containing resistor and LED. Afterwards I had to choose resistor values to get different currents of 5-20 mA through the LEDs. And finally I had to calculate the currentof each branch, the total current and resistor power dissipation and to verify KCL and KVL.
+
+### Solution
+
 
