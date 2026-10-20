@@ -75,42 +75,68 @@ V<sub>R</sub> = 9 - 2 = 7 V
 Therefore, the voltage across each resistor is approximately 7 V.
 
 Now I calculate current on each branch.
+
 Using Ohm's Law:
+
 I<sub>1</sub> = V<sub>R</sub> / R<sub>1</sub>
+
 I<sub>1</sub> = 7 / 800
+
 I<sub>1</sub> = 0.00875 A = 8.75 mA
+
 I<sub>2</sub> = V<sub>R</sub> / R<sub>2</sub>
+
 I<sub>2</sub> = 7 / 400
+
 I<sub>2</sub> = 0.0175 A = 17.5 mA
+
 Both branch currents are within the required range of 5-20 mA.
 
 Total current:
+
 I<sub>T</sub> = I<sub>1</sub> + I<sub>2</sub>
+
 I<sub>T</sub> = 8.75 + 17.5 
+
 I<sub>T</sub> = 26.25 mA
 
 Next I calculated the power dissipated by each resistor using **Joule's Law of Heating**:
+
 P = I^2 * R
+
 V = I * R => I = V / R
+
 P = (V / R)^2 * R => P = V^2 / R
+
 P<sub>1</sub> = 7^2 / 800 = 0.06125 W = 61.25 mW
+
 P<sub>2</sub> = 7^2 / 400 = 0.1225 W = 122.5 mW
+
 Both resistors can be implemented using standard 0.25 W resistors.
 
 Kirchhoff's Current Law states that the total current entering a junction equals the total current leaving the junction.
 For this circuit:
+
 I<sub>T</sub> = I<sub>1</sub> + I<sub>2</sub>
+
 I<sub>T</sub> = 26.25 mA
+
 I<sub>1</sub> + I<sub>2</sub> = 18.75 + 17.5 = 26.25 mA
+
 Therefore, KCL is satisfied.
 
 Kirchhoff's Voltage Law states that the algebraic sum of the voltages around a closed loop equals zero.
 For Branch 1:
+
 V<sub>S</sub> - V<sub>R1</sub> - V<sub>LED1</sub> = 0
+
 9 - 7 - 2 = 0
+
 For Branch 2:
 V<sub>S</sub> - V<sub>R2</sub> - V<sub>LED2</sub> = 0
+
 9 - 7 - 2 = 0
+
 Therefore, KVL is satisfied for both branches under the assumed LED forward voltage.
 
 ### Pictures and Videos
