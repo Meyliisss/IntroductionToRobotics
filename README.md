@@ -150,3 +150,204 @@ ________________________________________________________________________________
 
 ### Third Exercise (RC Circuit)
 
+The objective of this experiment is to build and simulate an RC circuit using Falstad Circuit Simulator and study the charging and discharging behavior of capacitors. The circuit contains a 12 V DC source, a push button, an LED, resistors, and two capacitors. An RC circuit consists of resistors and capacitors. The resistor controls the current flowing through the circuit, while the capacitor stores electrical energy. When the push button is pressed, the capacitors charge from the 12 V DC source through the charging path. When the button is released, the source is disconnected from the charging path. The energy stored in the capacitors can then supply current through the discharge path. As the capacitor voltage decreases, the current through the LED also decreases, causing its brightness to fade. The charging and discharging rates depend on the effective resistance and equivalent capacitance of the circuit.
+
+For capacitors connected in series, the equivalent capacitance is calculated using:
+
+1/Ceq = 1/C1 + 1/C2
+
+For two capacitors, this becomes:
+
+Ceq = (C1 × C2) / (C1 + C2)
+
+Given:
+
+C1 = C2 = 1 mF = 0.001 F
+
+Substituting:
+
+Ceq = (0.001 × 0.001) / (0.001 + 0.001)
+
+Ceq = 0.0005 F
+
+Therefore:
+
+Ceq = 500 µF = 0.5 mF
+
+Connecting capacitors in series reduces the equivalent capacitance. For two identical capacitors, the equivalent capacitance is half the value of either capacitor.
+
+For capacitors connected in parallel, the equivalent capacitance is the sum of their capacitances:
+
+Ceq = C1 + C2
+
+Given:
+
+C1 = C2 = 1 mF
+
+Substituting:
+
+Ceq = 1 mF + 1 mF
+
+Therefore:
+
+Ceq = 2 mF = 2000 µF = 0.002 F
+
+Connecting capacitors in parallel increases the equivalent capacitance. For two identical capacitors, the equivalent capacitance is twice the value of either capacitor.
+
+The RC time constant describes how quickly the capacitor voltage changes during charging and discharging.
+
+The formula is:
+
+τ = R × Ceq
+
+Where:
+
+- τ is the time constant in seconds.
+- R is the effective resistance in ohms.
+- Ceq is the equivalent capacitance in farads.
+
+For the initial theoretical comparison, an effective resistance of 1 kΩ is assumed.
+
+Series Configuration
+
+Equivalent capacitance:
+
+Ceq = 0.0005 F
+
+Time constant:
+
+τ = 1000 × 0.0005
+
+τ = 0.5 seconds
+
+Parallel Configuration
+
+Equivalent capacitance:
+
+Ceq = 0.002 F
+
+Time constant:
+
+τ = 1000 × 0.002
+
+τ = 2 seconds
+
+The parallel configuration has four times the equivalent capacitance and four times the time constant of the series configuration, assuming the effective resistance is the same. In an ideal first-order RC circuit, approximately 63.2% of the total charging voltage change occurs after one time constant. After five time constants, the capacitor is approximately 99.3% charged or discharged. The actual time constant depends on the resistance seen by the capacitor bank. The LED and the 220 Ω resistor may affect the discharge behavior, so the assumed 1 kΩ resistance must be verified against the actual circuit topology.
+
+The capacitor voltage during charging is described by:
+
+Vc(t) = Vs × (1 - e^(-t/τ))
+
+Where:
+
+- Vc(t) is the capacitor voltage at time t.
+- Vs is the supply voltage.
+- τ is the RC time constant.
+- t is the elapsed time.
+- e is the exponential constant.
+
+For this experiment:
+
+Vs = 12 V
+
+The capacitor initially has a voltage of 0 V and gradually approaches the supply voltage of 12 V. As charging progresses, the capacitor voltage increases and the charging current decreases.
+The capacitor voltage during discharging is described by:
+
+Vc(t) = V0 × e^(-t/τ)
+
+Where:
+
+- Vc(t) is the capacitor voltage at time t.
+- V0 is the initial capacitor voltage at the start of discharging.
+- τ is the RC time constant.
+- t is the elapsed time.
+
+For this experiment, the initial voltage is assumed to be 12 V. After the push button is released, the capacitor voltage decreases over time. The discharge current also decreases, causing the LED to become dimmer. The exact LED fading behavior depends on the discharge path and the LED’s electrical characteristics.
+
+The selected capacitor voltage threshold is 6 V.
+
+For charging:
+
+- Initial voltage: 0 V
+- Supply voltage: 12 V
+- Target voltage: 6 V
+
+For discharging:
+
+- Initial voltage: 12 V
+- Target voltage: 6 V
+
+Charging Time
+
+The charging equation is:
+
+Vc(t) = Vs × (1 - e^(-t/τ))
+
+Rearranging to calculate time:
+
+t = -τ × ln(1 - Vc/Vs)
+
+Substituting the chosen voltages:
+
+t = -τ × ln(1 - 6/12)
+
+t = -τ × ln(0.5)
+
+Therefore:
+
+t = 0.693 × τ
+
+For the series configuration:
+
+t = 0.693 × 0.5
+
+t ≈ 0.347 seconds
+
+For the parallel configuration:
+
+t = 0.693 × 2
+
+t ≈ 1.386 seconds
+
+Discharging Time
+
+The discharging equation is:
+
+Vc(t) = V0 × e^(-t/τ)
+
+Rearranging:
+
+t = -τ × ln(Vc/V0)
+
+Substituting the chosen voltages:
+
+t = -τ × ln(6/12)
+
+Therefore:
+
+t = 0.693 × τ
+
+For the series configuration:
+
+t = 0.693 × 0.5
+
+t ≈ 0.347 seconds
+
+For the parallel configuration:
+
+t = 0.693 × 2
+
+t ≈ 1.386 seconds
+
+### Pictures and Videos
+
+![Exercise 3 circuit](Homework%232/ex2/ex2circseries.png)
+
+[Watch the Exercise 3 video](Homework%232/ex3/ex3vidser.mov)
+
+![Exercise 3 circuit](Homework%232/ex3/ex3circparal.png)
+
+[Watch the Exercise 3 video](Homework%232/ex3/ex3vidparal.mov)
+
+![Exercise 3 calculations](Homework%232/ex3/ex3sol.jpg)
+
