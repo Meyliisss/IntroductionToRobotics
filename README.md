@@ -341,7 +341,7 @@ t ≈ 1.386 seconds
 
 ### Pictures and Videos
 
-![Exercise 3 circuit](Homework%232/ex2/ex2circseries.png)
+![Exercise 3 circuit](Homework%232/ex3/ex3circseries.png)
 
 [Watch the Exercise 3 video](Homework%232/ex3/ex3vidser.mov)
 
