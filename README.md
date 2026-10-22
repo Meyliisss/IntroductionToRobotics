@@ -152,6 +152,8 @@ ________________________________________________________________________________
 
 The objective of this experiment is to build and simulate an RC circuit using Falstad Circuit Simulator and study the charging and discharging behavior of capacitors. The circuit contains a 12 V DC source, a push button, an LED, resistors, and two capacitors. An RC circuit consists of resistors and capacitors. The resistor controls the current flowing through the circuit, while the capacitor stores electrical energy. When the push button is pressed, the capacitors charge from the 12 V DC source through the charging path. When the button is released, the source is disconnected from the charging path. The energy stored in the capacitors can then supply current through the discharge path. As the capacitor voltage decreases, the current through the LED also decreases, causing its brightness to fade. The charging and discharging rates depend on the effective resistance and equivalent capacitance of the circuit.
 
+### Solution
+
 For capacitors connected in series, the equivalent capacitance is calculated using:
 
 1/Ceq = 1/C1 + 1/C2
@@ -351,3 +353,7 @@ t ≈ 1.386 seconds
 
 ![Exercise 3 calculations](Homework%232/ex3/ex3sol.jpg)
 
+
+### Conclusion
+
+This homework provided practical experience in designing and analyzing electrical circuits using Falstad Circuit Simulator. The experiments demonstrated the relationships between voltage, current, resistance, and capacitance. They also improved my skills in circuit construction, electrical calculations, and comparing theoretical results with simulation behavior.
