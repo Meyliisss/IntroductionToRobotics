@@ -357,3 +357,53 @@ t ≈ 1.386 seconds
 ### Conclusion
 
 This homework provided practical experience in designing and analyzing electrical circuits using Falstad Circuit Simulator. The experiments demonstrated the relationships between voltage, current, resistance, and capacitance. They also improved my skills in circuit construction, electrical calculations, and comparing theoretical results with simulation behavior.
+_____________________________________________________________________________________________________________________________________________________
+
+## Homework #3
+
+For this homework I had to build a fan control and status panel using an ESP32. The potentiometer sets the requested fan speed, an external LED simulates the fan, an RGB LED displays the operating level, and a buzzer gives a short notification at high speed. The built-in LED also blinks independently to show that the controller is running. The fan is simulated with an LED; no motor is connected.
+
+### Hardware and Connections
+
+The project uses one fixed circuit with these ESP32 GPIO assignments:
+
+| Component | ESP32 GPIO | Connection |
+|---|---:|---|
+| Built-in LED | GPIO2 | On-board LED |
+| Potentiometer | GPIO34 | Center pin to GPIO34; outer pins to 3.3 V and GND |
+| Fan indicator LED | GPIO18 | LED in series with a current-limiting resistor |
+| RGB LED red channel | GPIO25 | Red leg through a current-limiting resistor |
+| RGB LED green channel | GPIO26 | Green leg through a current-limiting resistor |
+| RGB LED blue channel | GPIO27 | Blue leg through a current-limiting resistor |
+| Passive buzzer | GPIO23 | Buzzer between GPIO23 and GND |
+
+All components share the ESP32 ground. The potentiometer is powered from 3.3 V, not 5 V. Each LED channel has its own current-limiting resistor. The RGB logic in the program assumes a common-cathode LED, with its common pin connected to GND.
+
+### Solution
+
+The potentiometer is read using the ESP32's 12-bit ADC, producing values from 0 to 4095. The requested fan speed is converted to an 8-bit PWM value:
+
+PWM = ADC reading mapped from 0-4095 to 0-255
+
+The PWM value controls the brightness of the external LED on GPIO18. A higher potentiometer reading produces a higher PWM value and a brighter LED, simulating a faster fan.
+
+The ADC range is divided into three operating levels:
+
+- **Low speed (0-1364):** the RGB LED is blue.
+- **Medium speed (1365-2729):** the red and green channels turn on together, producing yellow.
+- **High speed (2730-4095):** the RGB LED is red.
+
+The buzzer gives a 1000 Hz tone for 700 ms when the potentiometer first enters the high-speed range. A flag prevents it from sounding continuously while the potentiometer remains high. The flag is reset after the reading falls to 2600 or below, so another notification can sound on a later entry into the high-speed range.
+
+The built-in LED toggles every 1000 ms using `millis()`. The main loop does not use `delay()`, so it can keep reading the potentiometer and updating the outputs while the heartbeat and sound notification are handled. Once per second, the Serial Monitor prints the raw ADC value, calculated PWM value, and selected RGB operating level.
+
+### Pictures and Videos
+
+![Assembled Homework 3 circuit](Homework3/hardware-setup.png)
+
+The hardware photo is included above. Add the video demonstration link here after uploading the video.
+
+### Conclusion
+
+This project demonstrates how analog input, PWM output, digital indicators, and timed sound notifications can be combined in one ESP32 program. It also uses non-blocking timing so the heartbeat continues independently while the other inputs and outputs are updated. No optional bonus features were implemented.
+_____________________________________________________________________________________________________________________________________________________
