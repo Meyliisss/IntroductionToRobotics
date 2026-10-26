@@ -13,21 +13,58 @@ const int RGB_GREEN_PIN = 26; // RGB LED green leg (through 220 Ohm resistor)
 const int RGB_BLUE_PIN = 27;  // RGB LED blue leg  (through 220 Ohm resistor)
 const int buzzerPin = 23;
 const int buzzerTone = 1000; // Frequency of the buzzer tone in Hz
+
+// Notes in the melody (0 represents a rest).
 const int melody[] = {
-NOTE_C4, NOTE_G3, NOTE_G3, NOTE_A3,
-NOTE_G3, 0, NOTE_B3, NOTE_C4
+  NOTE_C4, NOTE_G3, NOTE_G3, NOTE_A3,
+  NOTE_G3, 0, NOTE_B3, NOTE_C4
 };
 // Note durations: 4 = quarter note, 8 = eighth note, etc.
 const int noteDurations[] = {
-4, 8, 8, 4, 4, 4, 4, 4
+  4, 8, 8, 4, 4, 4, 4, 4
 };
 const int noteCount = sizeof(melody) / sizeof(melody[0]);
+
+
 int state = 0; //0-blue, 1-yellow, 2-red
 int prMillis = 0;
 bool ledState = LOW;
 bool buzzed = false;
 
+// Melody player state (non-blocking, so loop() keeps running while it plays).
+bool melodyPlaying = false;
+int noteIndex = 0;
+unsigned long noteStartMillis = 0;
 
+void playCurrentNote() {
+  noteStartMillis = millis();
+  // A frequency of 0 represents a rest.
+  if (melody[noteIndex] > 0) {
+    tone(buzzerPin, melody[noteIndex], 1000 / noteDurations[noteIndex]);
+  }
+}
+
+void startMelody() {
+  melodyPlaying = true;
+  noteIndex = 0;
+  playCurrentNote();
+}
+
+// Call every loop(): moves on to the next note once the current one
+// (plus a 30% pause) is over.
+void updateMelody() {
+  if (!melodyPlaying) return;
+  int noteDuration = 1000 / noteDurations[noteIndex];
+  if (millis() - noteStartMillis >= noteDuration * 1.30) {
+    noTone(buzzerPin);
+    noteIndex++;
+    if (noteIndex >= noteCount) {
+      melodyPlaying = false;
+    } else {
+      playCurrentNote();
+    }
+  }
+}
 
 
 void setup() {
@@ -44,19 +81,8 @@ void setup() {
   pinMode(19, OUTPUT);
   pinMode(buzzerPin, OUTPUT);
   digitalWrite(19, HIGH);
+
   
-  pinMode(buzzerPin, OUTPUT);
-  for (int i = 0; i < noteCount; i++) {
-  int noteDuration = 1000 / noteDurations[i];
-  // A frequency of 0 represents a rest.
-  if (melody[i] > 0) {
-  tone(buzzerPin, melody[i], noteDuration);
-  }
-  // Add a 30% pause between notes.
-  int pauseBetweenNotes = noteDuration * 1.30;
-  delay(pauseBetweenNotes);
-  noTone(buzzerPin);
-}
 }
 
 void loop() {
@@ -97,10 +123,11 @@ void loop() {
     
   }
   analogWrite(FAN_LED_PIN, fanLedBrightness);
-  if (potValue >= 2730 && !buzzed) {
-    tone(buzzerPin, buzzerTone, 700);
+  if (potValue > 2730 && !buzzed) {
+    startMelody();
     buzzed = true;
   }
+  updateMelody();
   if (potValue <= 2600) {
     buzzed = false;
   }
