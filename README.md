@@ -467,3 +467,8 @@ The Serial Monitor output below shows the mode changes on short presses and the 
 
 This project combines debounced input, a short ISR, short/long press detection and several independent timed behaviours in one ESP32 program. Using an interrupt only to signal a possible press, and validating it in the main loop with `millis()`, gives reliable button handling while the blinking and the heartbeat continue to run without blocking.
 _____________________________________________________________________________________________________________________________________________________
+
+## Homework #5
+
+For this homework I built a joystick-controlled reaction game using an ESP32, a 74HC595 shift register, and a four-digit seven-segment display. See the [Homework #5 explanation, wiring, controls, code examples, photos, and video](Homework%235/README.md).
+_____________________________________________________________________________________________________________________________________________________
