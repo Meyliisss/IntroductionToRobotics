@@ -10,6 +10,9 @@ If you are new to robotics, this README is written for you. Each idea is explain
 
 ## Demo video
 
+[![Elevator demo video: click to play](photos/elevator.jpeg)](photos/elevator.mp4)
+
+
 > 🎬 **[Watch the demonstration video](photos/elevator.mp4)**
 
 What to look for in the video:
