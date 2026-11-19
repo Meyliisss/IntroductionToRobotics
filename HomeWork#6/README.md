@@ -10,9 +10,7 @@ If you are new to robotics, this README is written for you. Each idea is explain
 
 ## Demo video
 
-[![Elevator demo video: click to play](images/video_thumbnail.jpg)](media/elevator_demo.mp4)
-
-> 🎬 **[Watch the demonstration video (media/elevator_demo.mp4, 56 s)](media/elevator_demo.mp4)**
+> 🎬 **[Watch the demonstration video](photos/elevator.mp4)**
 
 What to look for in the video:
 
@@ -101,7 +99,7 @@ Our model does exactly that:
 
 ### Circuit schematic
 
-![Circuit schematic for Homework 6](images/hw6_circuit_schematic.jpg)
+![Circuit schematic for Homework 6](photos/schematic.jpeg)
 
 All ground symbols are the common ESP32 GND, and 3.3 V is the ESP32's 3V3 pin (the board is powered over USB).
 
@@ -156,11 +154,11 @@ The display's common cathode pins go to GND.
 
 **Top view.** From left to right: the ESP32 (top-left), the three green request LEDs above the three buttons, the yellow movement LED, the buzzer, and the 7-segment display on the right. The 74HC595 and the segment resistors sit on the lower breadboard.
 
-![Top view of the assembled circuit](images/circuit_top_view.jpg)
+![Top view of the assembled circuit](photos/elevator.jpeg)
 
 **Side view.** The same circuit running, with the code in VS Code / PlatformIO and the ESP-IDF log output in the terminal behind it.
 
-![Side view of the circuit with code and serial logs](images/circuit_side_view_with_logs.jpg)
+![Side view of the circuit with code and serial logs](photos/elevator1.jpeg)
 
 ---
 
@@ -217,8 +215,7 @@ Homework 6/
 ├── src/
 │   ├── CMakeLists.txt    # component registration (shown above)
 │   └── main.cpp          # the whole elevator program
-├── images/               # schematic, photos, video thumbnail
-├── media/                # demonstration video
+├── photos/               # schematic, circuit photos, demonstration video
 └── README.md             # this file
 ```
 
@@ -572,7 +569,7 @@ Good embedded code is judged by what happens in the awkward cases, not only the 
 | 8 | Fully non-blocking (elapsed-time checks + short `vTaskDelay`) | ✅ | main loop |
 | 9 | ESP-IDF logging of all required events, event-driven | ✅ | `ESP_LOGI/W/E` calls |
 | 10 | Native ESP-IDF drivers (GPIO, LEDC, esp_timer, log), structured functions | ✅ | whole `main.cpp` |
-| 11 | Video demonstration | ✅ | [media/elevator_demo.mp4](media/elevator_demo.mp4) |
+| 11 | Video demonstration | ✅ | [photos/elevator.mp4](photos/elevator.mp4) |
 | Bonus | **74HC595 shift register** for the display, with bit mapping explained | ✅ | `shiftOutByte()`, section [6.8](#68-7-segment-display-through-a-74hc595-shift-register) |
 | Extra | Doors re-open if the current floor is requested while closing | ✅ | `handleFloorRequest()` |
 
