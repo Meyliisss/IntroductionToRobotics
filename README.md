@@ -21,4 +21,9 @@ For this homework I completed the smart lamp controller using push button. See t
 ## [Homework #5](Homework%235/README.md)
 
 For this homework I built a joystick-controlled reaction game using an ESP32, a 74HC595 shift register, and a four-digit seven-segment display. See the [Homework #5 explanation, wiring, controls, code examples, photos and video](Homework%235/README.md).
-_____________________________________________________________________________________________________________________________________________________
+
+## [Homework #6](Homework%236/README.md)
+
+For this homework I built a three-floor elevator control system using the ESP32 and native ESP-IDF. See the [Homework #6 explanation, wiring, controls, code examples, photos and video](Homework%236/README.md).
+
+
